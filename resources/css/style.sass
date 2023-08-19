@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap')
+*
+    margin: 0
+    padding: 0
+    font-family: 'Inter', sans-serif !important
+
+
+body
+    background: #fcfcfc
+
+.container
+    width: 100%
+    max-width: 1000rem
+    margin-inline: auto
+
+header
+    background: white
+    padding: 10rem 0
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0
+
+    @media (max-width: 768px)
+        padding: 10rem 15rem
+
+    .container
+        display: flex
+        justify-content: space-between
+
+        a
+            font-size: 20rem
+            color: dimgray
+            text-decoration: none
+
+
+main
+    margin-top: 50rem
+
+    @media (max-width: 768px)
+        text-align: center
+
+.main
+    &_title
+        font-size: 35rem
+        border-bottom: 3px solid #68b0dc
+
+        @media (max-width: 768px)
+            text-align: center
+            margin: auto
+            font-size: 25rem
+
+.window
+    margin-top: 40rem
+    background: #ffffff
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0
+
+    &_title
+        font-size: 30rem
+        font-weight: 600
+        margin-bottom: 20rem
+
+        @media (max-width: 768px)
+            text-align: start
+            font-size: 25rem
+
+.pesontedan
+    margin-bottom: 1px
+    width: 100%
+    color: #f3f1f1
+    user-select: none
+    overflow: hidden
+
+    input
+        opacity: 0
+        z-index: -1
+
+        &:checked
+            & ~ .pesontedan-content
+                max-height: 100vh
+
+    label
+        display: flex
+        align-items: center
+        padding: 0 0 0 0
+        background: transparent
+        cursor: pointer
+        color: #2f2f2f
+        font-size: 18rem
+        font-weight: 600
+        user-select: none
+
+        @media (max-width: 768px)
+            text-align: start
+
+
+    input[type=radio]
+        & + label
+            &::after
+                content: "\25BC"
+
+        .svg-one
+            display: none !important
+
+    input[type=checkbox]:checked
+        & + label
+            &::after
+                transform: rotate(315deg)
+        .svg-one
+            display: none !important
+
+    input[type=radio]:checked
+        & + label
+            &::after
+                transform: rotateX(180deg)
+        .svg-one
+            display: none !important
+
+.pesontedan-content
+    max-height: 0
+    overflow: hidden
+    background: transparent
+    transition: max-height .40s
+    font-size: 14rem
+    color: #646464
+
+    p
+        @media (max-width: 768px)
+            text-align: start
+
+.svg
+    svg
+        width: 19rem
+        height: 19rem
+        position: relative
+        top: 3rem
+
+
+.admin
+    &_title
+        font-size: 21rem
+        margin-bottom: 20rem
+
+    &_window
+        background: white
+        box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0
+        padding: 15rem 30rem
+        margin-bottom: 50rem
+        margin-top: 40rem
+
+        input
+            border: 1px solid #d9d9d9
+            padding: 5rem 8rem
+            font-size: 17rem
+            outline: none
+            border-radius: 3rem
+
+        .input_div
+            display: flex
+            flex-direction: column
+            gap: 20rem
+
+
+.btn
+    border: none
+    outline: none
+    background: #68b0dc
+    color: white
+    padding: 7rem 20rem
+    font-size: 14rem
+    cursor: pointer
+    transition: .2s
+    border-radius: 3rem
+
+    &:hover
+        background: #5595bd
+
+
+.btn-d
+    border: none
+    outline: none
+    background: #dc6876
+    color: white
+    padding: 7rem 20rem
+    font-size: 14rem
+    cursor: pointer
+    transition: .2s
+    border-radius: 3rem
+
+    &:hover
+        background: #bd4655
+
+
+.btn_div
+    display: flex
+    gap: 20rem
+
+.error
+    color: darkred
+    font-size: 15rem
+
+.pad_text
+    font-size: 15rem
+    color: #5e5e5e
+    border-top: 2px solid #bbbbbb
+    cursor: pointer
+    user-select: none
+
+    &--active
+        border-top: 2px solid cornflowerblue
+        color: cornflowerblue
+
+.admin_flex
+    display: flex
+    gap: 15rem
+    margin-bottom: 20rem
+
+    @media (max-width: 768px)
+        justify-content: center
+
+.admin_under--title
+    margin-top: 30rem
+    font-size: 17rem
+    font-weight: 500
+    margin-bottom: 15rem
+
+.flex_main
+    margin-top: -20rem
+    display: flex
+    gap: 150rem
+
+    @media (max-width: 768px)
+        flex-direction: column
+        gap: 0
